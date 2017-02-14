@@ -1,51 +1,37 @@
-.toggle-menu {
-  position: relative;
-  font-size: 4rem;
-  z-index: 5000;
-  color: #333;
-  top: -0.5rem;
-  left: 1.5rem;
-  transition: all 0.4s ease-in-out; }
-  .toggle-menu:hover {
-    transition: all 0.4s ease-in-out;
-    color: gray; }
+/* Variables */
+/* Small Navigation */
+.logo-small {
+  float: right; }
 
-    .overlay-menu {
-      position: absolute;
-      z-index: 1000;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      margin: 0;
-      padding: 5rem 0 0;
-      opacity: 0;
-      list-style: none;
-      background: url("http://www.nasa.gov/sites/default/files/cygx1_ill.jpg") no-repeat center center;
-      background-size: cover;
-      text-align: center;
-      transform: translateX(-100%) rotateX(40deg);
-      transition: all 400ms cubic-bezier(1, -0.4, 0.44, 0.985); }
-      .overlay-menu li {
-        font-size: 1.5rem; }
-        .overlay-menu a {
-          display: block;
-          color: #fff;
-          font-weight: bold;
-          height: 6.25rem;
-          line-height: 6.25rem;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-          text-decoration: none; }
-          .overlay-menu a:hover {
-            background-color: #0f88ff; }
-            .overlay-menu.is-open ~ .toggle-menu {
-              display: inline-block;
-              transition: all 0.4s ease-in-out;
-              transform: rotate(135deg);
-              color: white; }
+  .title-bar {
+    padding: 0 .5rem; }
 
-              .is-open {
-                top: 0;
-                opacity: 1;
-                transform: perspective(200px) translateX(0) rotateX(0); }
+    .menu-icon,
+    .title-bar-title {
+      position: relative;
+      top: 10px; }
+
+      /* Medium-Up Navigation */
+      @media only screen and (min-width: 40rem) {
+        .logo-wrapper {
+          position: relative; }
+          .logo-wrapper .logo {
+            width: 118px;
+            height: 92px;
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            top: -6px;
+            margin-left: -59px; }
+
+            .top-bar-right {
+              width: 50%;
+              padding-left: 86px; }
+              .top-bar-right ul {
+                float: left; }
+
+                .top-bar-left {
+                  width: 50%;
+                  padding-right: 86px; }
+                  .top-bar-left ul {
+                    float: right; } }
